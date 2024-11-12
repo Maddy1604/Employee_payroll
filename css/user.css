@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+  
+/* Body Styling */
+body {
+    background-color: #f0f0f0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container img {
+    width: 50px;
+    height: 52px;
+}
+
+.header-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #42515f;
+    margin-left: 10px;
+}
+
+/* Spacer Between Header and Form */
+.spacer {
+    height: 20px;
+}
+
+/* Form Container Styling */
+.form-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+    font-size: 22px;
+    /* font-weight: bold; */
+    color: #42515f;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Form Row Styling */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.form-row label {
+    /* font-weight: bold; */
+    margin-right: 10px;  /* Space between label and input */
+    min-width: 100px; /* Aligning all labels at the same starting point */
+}
+
+input[type="text"],
+select,
+textarea {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #33333389;
+    width: 100%; /* Allow input elements to take up full width */
+}
+
+/* Profile Image Selection */
+.profile-image {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Gender and Department Sections */
+.gender,
+.department,
+.start-date {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Textarea Styling */
+textarea {
+    height: 60px;
+    resize: none;
+}
+
+/* Action Buttons Styling */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel-btn,
+.submit-btn,
+.reset-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #adacac6f;
+    color: black;
+}
+
+.submit-btn,
+.reset-btn {
+    background-color: #adacac6f;
+    color: black;
+}
+
+.submit-reset {
+    display: flex;
+    gap: 10px;
+}

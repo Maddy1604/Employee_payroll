@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="../css/user.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <div class="logo-container">
+      <img src="../asset/logo.png" alt="Logo" />
+    </div>
+    <div class="header-title">Employee Payroll</div>
+  </div>
+
+  <!-- Space Between Header and Form -->
+  <div class="spacer"></div>
+
+  <!-- Form Section -->
+  <div class="form-container">
+    <h2 class="form-header">Employee Payroll Form</h2>
+    <form action="">
+      <!-- Form Fields Inline -->
+      <div class="form-row">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+
+      <div class="form-row">
+        <label>Profile Image:</label>
+        <div class="profile-image">
+          <input type="radio" name="profile_image" id="img1" />
+          <img src="../asset/profile1.png" alt="Profile 1" />
+          <input type="radio" name="profile_image" id="img2" />
+          <img src="../asset/profile2.png" alt="Profile 2" />
+          <input type="radio" name="profile_image" id="img3" />
+          <img src="../asset/profile3.png" alt="Profile 3" />
+          <input type="radio" name="profile_image" id="img4" />
+          <img src="../asset/profile4.png" alt="Profile 4" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Gender:</label>
+        <div class="gender">
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Department:</label>
+        <div class="department">
+          <input type="checkbox" id="hr" name="department" value="HR" />
+          <label for="hr">HR</label>
+          <input type="checkbox" id="sales" name="department" value="Sales" />
+          <label for="sales">Sales</label>
+          <input type="checkbox" id="finance" name="department" value="Finance" />
+          <label for="finance">Finance</label>
+          <input type="checkbox" id="engineer" name="department" value="Engineer" />
+          <label for="engineer">Engineer</label>
+          <input type="checkbox" id="others" name="department" value="Others" />
+          <label for="others">Others</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="salary">Salary:</label>
+        <select id="salary" name="salary">
+          <option value="">Select Salary</option>
+          <option value="30000">30,000</option>
+          <option value="50000">50,000</option>
+          <option value="70000">70,000</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Start Date:</label>
+        <div class="start-date">
+          <select name="day">
+            <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+          </select>
+          <select name="month">
+            <option value="">Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="Augest">Augest</option>
+            <option value="September">September</option>
+            <option value="Octomber">Octomber</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+          <select name="year">
+            <option value="">Year</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+
+      <!-- Button Section -->
+      <div class="form-actions">
+        <button type="button" class="cancel-btn">Cancel</button>
+        <div class="submit-reset">
+          <button type="submit" class="submit-btn">Submit</button>
+          <button type="reset" class="reset-btn">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../js/add-user.js">
+
+  </script>
+</body>
+</html>
