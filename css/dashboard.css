@@ -151,10 +151,23 @@
   }
   
   /* Action icons */
-  .action-icon {
+  .action-buttons {
+    display: flex;
+    gap: 10px; /* Adds space between the buttons */
+}
+
+.edit-btn, .delete-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.edit-btn img, .delete-btn img {
     width: 20px;
     height: 20px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
+    margin-right: 5px; /* Optional: space between icon and text */
+}
   
