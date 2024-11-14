@@ -54,6 +54,18 @@
       "salary": "70000",
       "startDate": "13-Octomber-2023",
       "notes": "Backbone of company"
+    },
+    {
+      "id": "98f4",
+      "name": "Kamla Harris",
+      "profileImage": "../asset/profile1.png",
+      "gender": "female",
+      "departments": [
+        "Sales"
+      ],
+      "salary": "50000",
+      "startDate": "14-November-2024",
+      "notes": "Kamla ka hamla"
     }
   ]
 }
