@@ -1,73 +1,18 @@
 {
   "employees": [
     {
-      "id": "51eb",
-      "name": "nikhil patil",
-      "profileImage": "../asset/profile4.png",
-      "gender": "male",
-      "departments": [
-        "HR",
-        "Sales",
-        "Finance"
-      ],
-      "salary": "70000",
-      "startDate": "2-January-2022",
-      "notes": "Nothing"
-    },
-    {
-      "id": "c389",
-      "name": "Judy Perry",
-      "profileImage": "../asset/profile1.png",
-      "gender": "female",
-      "departments": [
-        "HR",
-        "Finance"
-      ],
-      "salary": "70000",
-      "startDate": "2-January-2022",
-      "notes": "ththt"
-    },
-    {
-      "id": "21be",
-      "name": "Tupac Shukar",
+      "id": "3641",
+      "name": "Mahesh",
       "profileImage": "../asset/profile2.png",
       "gender": "male",
       "departments": [
         "HR",
-        "Finance",
-        "Engineer"
-      ],
-      "salary": "70000",
-      "startDate": "11-June-2022",
-      "notes": "Rap Battle"
-    },
-    {
-      "id": "38f4",
-      "name": "Rohit Shetty",
-      "profileImage": "../asset/profile4.png",
-      "gender": "male",
-      "departments": [
-        "HR",
-        "Sales",
-        "Finance",
-        "Engineer"
-      ],
-      "salary": "70000",
-      "startDate": "15-December-2024",
-      "notes": "Action Film Director"
-    },
-    {
-      "id": "fc0b",
-      "name": "Kiran Verma",
-      "profileImage": "../asset/profile1.png",
-      "gender": "female",
-      "departments": [
         "Sales",
         "Finance"
       ],
       "salary": "50000",
-      "startDate": "11-November-2024",
-      "notes": "NA"
+      "startDate": "9-June-2021",
+      "notes": "mahesh"
     }
   ]
 }

@@ -67,13 +67,17 @@ function displayEmployeeData(employees) {
     startDateCell.innerHTML = employee.startDate;
     row.appendChild(startDateCell);
 
-    // Edit and Delete options manually added
+    // Delete options manually added
     const actionCell = document.createElement("td");
     const deleteIcon = document.createElement("img");
     deleteIcon.classList = "delete-icon"
     deleteIcon.src = "../asset/delete.png"
-    deleteIcon.addEventListener("click", () => deleteEmployee(employee.id, row));
+    deleteIcon.addEventListener("click", (e) => {
+        e.preventDefault()
+        deleteEmployee( employee.id, row)
+    });
     
+    // Edit option added
     const editIcon = document.createElement("img")
     editIcon.classList = "edit-icon"
     editIcon.src = "../asset/edit.png"
@@ -89,12 +93,12 @@ function displayEmployeeData(employees) {
 }
 
 // Delete employee function
-function deleteEmployee(id, row) {
-axios.delete(`http://localhost:3000/employees/${id}`)
-    .then(() => {
-    row.remove(); // Remove the row from the table
-    console.log(`Employee with ID ${id} deleted successfully.`);
-    });
+function deleteEmployee( id, row) {
+    axios.delete(`http://localhost:3000/employees/${id}`)
+        .then(() => {
+        row.remove(); // Remove the row from the table
+        console.log(`Employee with ID ${id} deleted successfully.`);
+        });
     
 }
 
