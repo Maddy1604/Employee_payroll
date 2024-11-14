@@ -1,8 +1,36 @@
 {
   "employees": [
     {
-      "id": "3641",
-      "name": "Mahesh",
+      "name": "Mahesh Lavande",
+      "profileImage": "../asset/profile4.png",
+      "gender": "male",
+      "departments": [
+        "HR",
+        "Sales",
+        "Finance",
+        "Engineer"
+      ],
+      "salary": "70000",
+      "startDate": "12-December-2022",
+      "notes": "Mahesh ",
+      "id": "1484"
+    },
+    {
+      "id": "8b21",
+      "name": "Rushikesh zarekar",
+      "profileImage": "../asset/profile4.png",
+      "gender": "male",
+      "departments": [
+        "HR",
+        "Engineer"
+      ],
+      "salary": "70000",
+      "startDate": "12-Octomber-2022",
+      "notes": "Highly Motivated"
+    },
+    {
+      "id": "5e28",
+      "name": "Nikhil Patil",
       "profileImage": "../asset/profile2.png",
       "gender": "male",
       "departments": [
@@ -10,9 +38,22 @@
         "Sales",
         "Finance"
       ],
-      "salary": "50000",
-      "startDate": "9-June-2021",
-      "notes": "mahesh"
+      "salary": "70000",
+      "startDate": "14-November-2024",
+      "notes": "Data engineer"
+    },
+    {
+      "id": "265e",
+      "name": "Lalit Sangore",
+      "profileImage": "../asset/profile4.png",
+      "gender": "male",
+      "departments": [
+        "Sales",
+        "Finance"
+      ],
+      "salary": "70000",
+      "startDate": "13-Octomber-2023",
+      "notes": "Backbone of company"
     }
   ]
 }
