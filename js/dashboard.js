@@ -1,17 +1,35 @@
 // Get the "Add User" button by its ID
 const addUserBtn = document.getElementById("addUserBtn");
 
-// Attach a click event listener to Add User button
-addUserBtn.addEventListener("click", function() {
-    // Clear editEmployeeKey to ensure new user uses POST
-    sessionStorage.removeItem("editEmployeeKey");
-    window.location.href = "user.html";
-});
+//Get search button and search input by its ID
+const searchBtn = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput")  
+let employeeData = [];
 
 // Fetching the employee data from db.json
 axios.get("http://localhost:3000/employees")
-    .then(response => displayEmployeeData(response.data))
+    .then(response => {
+        employeeData = response.data; // Store fetched data
+        displayEmployeeData(employeeData); // Display initial data
+    })
     .catch(error => console.error("Error fetching employee data:", error));
+
+// Event listener for the search button
+searchBtn.addEventListener("click", function() {
+    const query = searchInput.value.trim().toLowerCase(); // Get search query and make it lowercase
+    const filteredData = employeeData.filter(employee =>
+        employee.name.toLowerCase().includes(query) // Check if name includes the query
+    );
+    
+    displayEmployeeData(filteredData); // Display filtered results
+});
+
+// Attach a click event listener to Add User button
+addUserBtn.addEventListener("click", function() {
+    // Clear editEmployeeKey to ensure new user uses POST
+    localStorage.removeItem("editEmployeeKey");
+    window.location.href = "user.html";
+});
 
 // Function to display employee data in the table
 function displayEmployeeData(employees) {
@@ -93,7 +111,7 @@ function displayEmployeeData(employees) {
 
         editBtn.addEventListener("click", () => {
             // Store employee ID in sessionStorage for editing
-            sessionStorage.setItem("editEmployeeKey", employee.id);
+            localStorage.setItem("editEmployeeKey", employee.id);
             window.location.href = "user.html";
         });
 
