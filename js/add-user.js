@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const editKey = sessionStorage.getItem("editEmployeeKey");
+    const editKey = localStorage.getItem("editEmployeeKey");
 
     if (editKey) {
         // Fetch employee data and populate the form for editing
@@ -44,6 +44,51 @@ $(document).ready(function () {
     }
 });
 
+// Validate form fields before submission
+function validateForm(empData) {
+    if (empData.name.length < 8) {
+        alert("Name should have at least 8 characters.");
+        return false;
+    }
+    if (!empData.profileImage) {
+        alert("Please select a profile image.");
+        return false;
+    }
+    if (!empData.gender) {
+        alert("Please select a gender.");
+        return false;
+    }
+    if (empData.departments.length === 0) {
+        alert("Please select at least one department.");
+        return false;
+    }
+    if (!empData.salary) {
+        alert("Please select a salary.");
+        return false;
+    }
+    // Validate start date
+    const day = $('select[name="day"]').val();
+    const month = $('select[name="month"]').val();
+    const year = $('select[name="year"]').val();
+
+    if (!day || !month || !year) {
+        alert("Please select a valid start date.");
+        return false;
+    }
+
+    // Convert start date to Date object
+    const startDate = new Date(`${month} ${day}, ${year}`);
+    const today = new Date();
+
+    // Check if start date is in the future
+    if (startDate <= today) {
+        alert("Start date must be a future date.");
+        return false;
+    }
+
+    return true;
+}
+
 // Handle form submission for add or edit
 function FormSubmission() {
     const empData = {
@@ -60,7 +105,11 @@ function FormSubmission() {
         empData.departments.push($(this).val());
     });
 
-    const editKey = sessionStorage.getItem("editEmployeeKey");
+    if (!validateForm(empData)) {
+        return;
+    }
+
+    const editKey = localStorage.getItem("editEmployeeKey");
 
     if (editKey) {
         // Update existing employee using PUT
@@ -71,7 +120,7 @@ function FormSubmission() {
             contentType: 'application/json',
             success: (response) => {
                 console.log("Employee updated successfully:", response);
-                sessionStorage.removeItem("editEmployeeKey");
+                localStorage.removeItem("editEmployeeKey");
                 window.location.href = "dashboard.html";
             },
             error: (error) => {
@@ -104,8 +153,14 @@ $('.submit-btn').on('click', function (event) {
     FormSubmission();
 });
 
-// Attach form submission handler
+// Cancel button click handler
 $('.cancel-btn').on('click', function (event) {
     event.preventDefault();
-    window.location.href = "dashboard.html"
+    window.location.href = "dashboard.html";
+});
+
+// Reset button click handler
+$('.reset-btn').on('click', function (event) {
+    event.preventDefault();
+    $('form')[0].reset();
 });
