@@ -3,7 +3,7 @@
     {
       "name": "Mahesh Lavande",
       "profileImage": "../asset/profile4.png",
-      "gender": "male",
+      "gender": "Male",
       "departments": [
         "HR",
         "Sales",
@@ -11,61 +11,75 @@
         "Engineer"
       ],
       "salary": "70000",
-      "startDate": "12-December-2022",
+      "startDate": "12-Jul-2025",
       "notes": "Mahesh ",
       "id": "1484"
     },
     {
-      "id": "8b21",
       "name": "Rushikesh zarekar",
       "profileImage": "../asset/profile4.png",
-      "gender": "male",
+      "gender": "Male",
       "departments": [
         "HR",
         "Engineer"
       ],
       "salary": "70000",
-      "startDate": "12-Octomber-2022",
-      "notes": "Highly Motivated"
+      "startDate": "12-Oct-2022",
+      "notes": "Highly Motivated",
+      "id": "8b21"
     },
     {
-      "id": "5e28",
       "name": "Nikhil Patil",
       "profileImage": "../asset/profile2.png",
-      "gender": "male",
+      "gender": "Male",
       "departments": [
         "HR",
         "Sales",
         "Finance"
       ],
       "salary": "70000",
-      "startDate": "14-November-2024",
-      "notes": "Data engineer"
+      "startDate": "14-Oct-2024",
+      "notes": "Data engineer",
+      "id": "5e28"
     },
     {
-      "id": "265e",
       "name": "Lalit Sangore",
       "profileImage": "../asset/profile4.png",
-      "gender": "male",
+      "gender": "Male",
       "departments": [
         "Sales",
         "Finance"
       ],
       "salary": "70000",
-      "startDate": "13-Octomber-2023",
-      "notes": "Backbone of company"
+      "startDate": "13-Apr-2023",
+      "notes": "Backbone of company",
+      "id": "265e"
     },
     {
-      "id": "98f4",
-      "name": "Kamla Harris",
-      "profileImage": "../asset/profile1.png",
-      "gender": "female",
+      "name": "Donald Trump",
+      "profileImage": "../asset/profile4.png",
+      "gender": "Male",
       "departments": [
+        "HR",
         "Sales"
       ],
       "salary": "50000",
-      "startDate": "14-November-2024",
-      "notes": "Kamla ka hamla"
+      "startDate": "14-Sep-2022",
+      "notes": "New President of America",
+      "id": "98f4"
+    },
+    {
+      "name": "Nilesh Jadhav",
+      "profileImage": "../asset/profile4.png",
+      "gender": "Male",
+      "departments": [
+        "HR",
+        "Sales"
+      ],
+      "salary": "50000",
+      "startDate": "17-Nov-2024",
+      "notes": "",
+      "id": "7389"
     }
   ]
 }
