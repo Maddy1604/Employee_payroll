@@ -25,7 +25,8 @@
       <!-- Form Fields Inline -->
       <div class="form-row">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name">
+        <span class="error-message" id="name-error"></span>
       </div>
 
       <div class="form-row">
@@ -39,6 +40,7 @@
           <img src="../asset/profile3.png" alt="Profile 3" />
           <input type="radio" name="profile_image" id="img4" />
           <img src="../asset/profile4.png" alt="Profile 4" />
+          <span class="error-message" id="profile-image-error"></span>
         </div>
       </div>
 
@@ -49,6 +51,7 @@
           <label for="male">Male</label>
           <input type="radio" id="female" name="gender" value="Female" />
           <label for="female">Female</label>
+          <span class="error-message" id="gender-error"></span>
         </div>
       </div>
 
@@ -67,15 +70,19 @@
           <label for="others">Others</label>
         </div>
       </div>
+      <div class="dept-error"><span class="error-message" id="departments-error"></span></div>
 
       <div class="form-row">
+        
         <label for="salary">Salary:</label>
         <select id="salary" name="salary">
-          <option value="">Select Salary</option>
+          <option value="">Select Salary </option>
           <option value="30000">30,000</option>
           <option value="50000">50,000</option>
           <option value="70000">70,000</option>
+          
         </select>
+        <span class="error-message" id="salary-error"></span>
       </div>
 
       <div class="form-row">
@@ -126,8 +133,10 @@
             <option value="2026">2026</option>
             <option value="2025">2025</option>
             <option value="2024">2024</option>
+            
           </select>
         </div>
+        <span class="error-message" id="start-date-error"></span>
       </div>
 
       <div class="form-row">
