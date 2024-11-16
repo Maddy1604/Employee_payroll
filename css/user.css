@@ -144,3 +144,12 @@ textarea {
     display: flex;
     gap: 10px;
 }
+
+.error-message{
+    margin-left: 10px   ;
+    color: orange;
+}
+
+.dept-error{
+    text-align: right;
+}
