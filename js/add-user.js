@@ -32,61 +32,75 @@ $(document).ready(function () {
         });
     } else {
         // Clear all form fields for a new user
-        $('#name').val('');
-        $('input[name="profile_image"]').prop("checked", false);
-        $('input[name="gender"]').prop("checked", false);
-        $('input[name="department"]').prop("checked", false);
-        $('#salary').val('');
-        $('#notes').val('');
-        $('select[name="day"]').val('');
-        $('select[name="month"]').val('');
-        $('select[name="year"]').val('');
+        clearForm();
     }
 });
 
+function clearForm() {
+    $('#name').val('');
+    $('input[name="profile_image"]').prop("checked", false);
+    $('input[name="gender"]').prop("checked", false);
+    $('input[name="department"]').prop("checked", false);
+    $('#salary').val('');
+    $('#notes').val('');
+    $('select[name="day"]').val('');
+    $('select[name="month"]').val('');
+    $('select[name="year"]').val('');
+    clearErrors();
+}
+
+// Clear all error messages
+function clearErrors() {
+    $('.error-message').text('');
+}
+
 // Validate form fields before submission
 function validateForm(empData) {
+    clearErrors(); // Clear existing error messages
+    let isValid = true;
+
     if (empData.name.length < 8) {
-        alert("Name should have at least 8 characters.");
-        return false;
+        $('#name-error').text("required at least 8 characters*");
+        isValid = false;
     }
     if (!empData.profileImage) {
-        alert("Please select a profile image.");
-        return false;
+        $('#profile-image-error').text("required*");
+        isValid = false;
     }
     if (!empData.gender) {
-        alert("Please select a gender.");
-        return false;
+        $('#gender-error').text("required*");
+        isValid = false;
     }
     if (empData.departments.length === 0) {
-        alert("Please select at least one department.");
-        return false;
+        $('#departments-error').text("required at least one department*");
+        isValid = false;
     }
     if (!empData.salary) {
-        alert("Please select a salary.");
-        return false;
+        $('#salary-error').text("required*");
+        isValid = false;
     }
+
     // Validate start date
     const day = $('select[name="day"]').val();
     const month = $('select[name="month"]').val();
     const year = $('select[name="year"]').val();
 
     if (!day || !month || !year) {
-        alert("Please select a valid start date.");
-        return false;
+        $('#start-date-error').text("Please select a valid start date.");
+        isValid = false;
+    } else {
+        // Convert start date to Date object
+        const startDate = new Date(`${month} ${day}, ${year}`);
+        const today = new Date();
+
+        // Check if start date is in the future
+        if (startDate <= today) {
+            $('#start-date-error').text("Start date must be a future date.");
+            isValid = false;
+        }
     }
 
-    // Convert start date to Date object
-    const startDate = new Date(`${month} ${day}, ${year}`);
-    const today = new Date();
-
-    // Check if start date is in the future
-    if (startDate <= today) {
-        alert("Start date must be a future date.");
-        return false;
-    }
-
-    return true;
+    return isValid;
 }
 
 // Handle form submission for add or edit
@@ -106,7 +120,7 @@ function FormSubmission() {
     });
 
     if (!validateForm(empData)) {
-        return;
+        return; // Stop submission if validation fails
     }
 
     const editKey = localStorage.getItem("editEmployeeKey");
@@ -163,4 +177,5 @@ $('.cancel-btn').on('click', function (event) {
 $('.reset-btn').on('click', function (event) {
     event.preventDefault();
     $('form')[0].reset();
+    clearErrors(); // Clear errors when resetting the form
 });
