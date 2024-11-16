@@ -5,7 +5,6 @@
       "profileImage": "../asset/profile4.png",
       "gender": "Male",
       "departments": [
-        "HR",
         "Sales",
         "Finance",
         "Engineer"
@@ -69,17 +68,17 @@
       "id": "98f4"
     },
     {
-      "name": "Nilesh Jadhav",
-      "profileImage": "../asset/profile4.png",
-      "gender": "Male",
+      "id": "ece2",
+      "name": "Sreeleela",
+      "profileImage": "../asset/profile1.png",
+      "gender": "Female",
       "departments": [
         "HR",
         "Sales"
       ],
       "salary": "50000",
-      "startDate": "17-Nov-2024",
-      "notes": "",
-      "id": "7389"
+      "startDate": "19-Nov-2024",
+      "notes": "Nice"
     }
   ]
 }
